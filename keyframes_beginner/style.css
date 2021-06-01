@@ -1,0 +1,67 @@
+/* ページのデフォルト設定 */
+/* ページの左上が基準となる */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 正方形の BOX */
+div {
+    width: 100px;
+    height: 100px;
+
+    /* 絶対配置 */
+    position: absolute;
+
+    background-color: lightseagreen;
+    color: white;
+
+    /* 太字 */
+    font-weight: bold;
+
+    /* フレックスボックス */
+    display: flex;
+    /* 上下中央寄せ */
+    align-items: center;
+    /* 左右中央寄せ */
+    justify-content: center;
+
+    /* アニメーション名 */
+    animation-name: test;
+    /* 継続時間（10秒）*/
+    animation-duration: 10s;
+}
+
+/* アニメーションの指定 */
+@keyframes test {
+    /* 0秒 */
+    0%{
+        left: 0px;
+        top: 0px;
+    }
+    /* 2秒 */
+    20%{
+        left: 100px;
+        top: 0px;
+    }
+    /* 4秒 */
+    40%{
+        left: 100px;
+        top: 100px;
+    }
+    /* 6秒 */
+    60%{
+        left: 200px;
+        top: 100px;
+    }
+    /* 8秒 */
+    80%{
+        left: 200px;
+        top: 200px;
+    }
+    /* 10秒 */
+    100%{
+        left: 300px;
+        top: 200px;
+    }
+}
