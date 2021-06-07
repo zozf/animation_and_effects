@@ -1,0 +1,7 @@
+html, body {
+    /* ページデフォルト設定（左上基準）*/
+    margin: 0;
+    padding: 0;
+    /* フォントデザイン設定 */
+    font-family: sans-serif;
+}
