@@ -1,7 +1,115 @@
 html, body {
     /* ページデフォルト設定（左上基準）*/
+    /* 外側の隙間 */
     margin: 0;
+    /* 内側の隙間 */
     padding: 0;
     /* フォントデザイン設定 */
     font-family: sans-serif;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    /* フレックスボックス */
+    display: flex;
+    /* 上下中央 */
+    align-items: center;
+    /* 左右中央 */
+    justify-content: center;
+    /* 背景色 */
+    background-color: white;
+}
+
+.loading-inner {
+    /* 文字列中央 */
+    text-align: center;
+}
+
+/* imgタグ */
+.loading-inner img {
+    /* 画像を134pxに縮小 */
+    width: 134px;
+    /* アニメーションをセット（1秒間で無限に繰り返す）*/
+    animation: loading_anime 1s infinite;
+}
+
+/* pタグ */
+.loading-inner p {
+    /* 文字間の距離 */
+    letter-spacing: 0.15em;
+    font-size: 13px;
+    /* 文字を太字 */
+    font-weight: bold;
+}
+
+/* spanタグ（テキスト装飾に使われる）*/
+.loading-inner span {
+    /* spanタグをインラインブロック要素に変更 */
+    display: inline-block;
+    /* 子要素が親要素を基準にする */
+    position: relative;
+    /* 内容がボックスに収まらない場合、収まらない部分は非表示 */
+    overflow: hidden;
+}
+
+/* ::before は、選択した要素の最初の子要素として擬似要素を作成 */
+.loading-inner span::before {
+    content: '';
+    /* 絶対配置（数学の絶対値）*/
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* block要素 */
+    display: block;
+    /* アニメーションをセット（3秒間で無限に繰り返す）*/
+    animation: text_anime 3s infinite;
+}
+
+/* アニメーション（画像）*/
+@keyframes loading_anime {
+    0% {
+        /*
+        transformプロパティの値に指定できる関数
+        translate（移動）2D&3D
+        rotate（回転）2D&3D
+        scale（伸縮）2D&3D
+        skew（傾斜）2Dのみ、degは角度
+        */
+        transform: scale(1.0, 1.0) translate3d(0, 0, 0);
+    }
+
+    30% {
+        transform: scale(1.0, 1.06) translate3d(-3%, -2%, 0) skew(4deg, 0deg);
+    }
+
+    45% {
+        transform: scale(1.0, 0.97) translate3d(-1%, -1%, 0) skew(1deg, 0deg);
+    }
+
+    75% {
+        transform: scale(1.0, 1.06) translate3d(3%, -2%, 0) skew(-4deg, 0deg);
+    }
+
+    90% {
+        transform: scale(1.0, 0.97) translate3d(1%, 1%, 0) skew(-1deg, 0deg);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translate3d(0, 0, 0);
+    }
+}
+
+/* アニメーション（loading...）*/
+@keyframes text_anime {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
