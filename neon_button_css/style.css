@@ -24,11 +24,14 @@ body {
   min-height: 100vh;
   /* グリッドモデルに従ってレイアウト */
   display: grid;
+  /* 一括指定（中央）*/
   place-items: center;
+  /* 背景色（var()関数に変数を入れる）*/
   background: var(--clr-bg);
-  font-family: "Balsamiq Sans", cursive;
+  /* 使用するフォントデザイン（Balsamiq Sans の Bold 700）*/
+  font-family: "Balsamiq Sans";
+  /* 文字色（ピンクネオン）*/
   color: var(--clr-neon);
-  padding-right: 10rem;
 }
 
 .neon-button {
