@@ -35,14 +35,21 @@ body {
 }
 
 .neon-button {
+  /* 文字の大きさ */
   font-size: 4rem;
-
+  /* neon-button クラスをインラインブロック要素に変更 */
   display: inline-block;
+  /* カーソルをリンクを示すポインターにする（指さしマーク）*/
   cursor: pointer;
+  /* テキストの装飾なし（背景が黒色だから文字も黒色になる？）*/
   text-decoration: none;
+  /* ボックス内の色（ピンクネオン）*/
   color: var(--clr-neon);
+  /* ピンクネオン色で一本線のボーダー（太さ0.125em）*/
   border: var(--clr-neon) 0.125em solid;
-  padding: 0.25em 1em;
+  /* 内側の隙間（上下0.24em・左右1em）*/
+  padding: 0.24em 1em;
+  /* ボックスにある4つのコーナー角を丸める */
   border-radius: 0.25em;
 
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
