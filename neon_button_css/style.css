@@ -91,9 +91,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  /* ボックス周りのシャドウ（ピンクネオン）効果 */
+  /* 点灯しているように表現 */
   box-shadow: 0 0 2em 0.5em var(--clr-neon);
   opacity: 0;
+  /* 要素の背景色をピンクネオン色にする */
   background-color: var(--clr-neon);
+  /* 位置指定要素、子孫要素、フレックスアイテムの z 順を定義 */
   z-index: -1;
   transition: opacity 100ms linear;
 }
