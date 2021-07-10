@@ -99,6 +99,9 @@ body {
   background-color: var(--clr-neon);
   /* 位置指定要素、子孫要素、フレックスアイテムの z 順を定義 */
   z-index: -1;
+  /* アニメーション変化設定 */
+  /* 100ミリ秒 (0.1秒) */
+  /* linear：開始から終了まで一定に変化 */
   transition: opacity 100ms linear;
 }
 
