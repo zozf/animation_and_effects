@@ -105,17 +105,29 @@ body {
   transition: opacity 100ms linear;
 }
 
+/* ポインティングデバイスで要素に反応したものの、アクティブ化する必要がないもの */
+/* 文字（NEON）を黒字にする（色の装飾を無効化）*/
 .neon-button:hover,
+/* クリックボタンの役割を作成 */
 .neon-button:focus {
+  /* ブラック */
   color: var(--clr-bg);
+  /* テキストの影エフェクトを無効 */
   text-shadow: none;
 }
 
+/* 疑似要素カーソル合わせ & クリック前 */
 .neon-button:hover::before,
 .neon-button:focus::before {
+  /* 不透明度を上げる */
+  /* 影（ピンクネオン）の色を濃くする */
   opacity: 1;
 }
+
+/* 疑似要素カーソル合わせ & クリック後 */
 .neon-button:hover::after,
 .neon-button:focus::after {
+  /* 不透明度を上げる */
+  /* 影（ピンクネオン）の色を濃くする */
   opacity: 1;
 }
